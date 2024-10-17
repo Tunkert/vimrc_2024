@@ -1,7 +1,40 @@
+call plug#begin()
+
+" regular plugins
+Plug 'neoclide/coc.nvim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'junegunn/goyo.vim'
+
+" themes
+Plug 'jacoborus/tender.vim'
+Plug 'morhetz/gruvbox'
+Plug 'joshdick/onedark.vim'
+
+call plug#end()
+
+" general
+filetype plugin indent on
 syntax on
-set ts=2 sw=2 ai si et sts=2
-set termguicolors
-colo evening
+
+" spacing
+set ts=2 sts=2 sw=2 et ai si
+
+" line numbers
 set nu rnu
-let g:user_emmet_leader_key=','
-let g:airline_theme='base16_dracula'
+
+" colors
+set bg=dark
+colo onedark 
+
+" wildmenu - tab through menu
+set wildmenu
+
+" airline on top also
+let g:airline#extensions#tabline#enabled = 1
+
+" no errorbell
+set belloff=all 
+
+" backspace
+set backspace=indent,eol,start
