@@ -4,11 +4,8 @@ call plug#begin()
 Plug 'neoclide/coc.nvim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'junegunn/goyo.vim'
 
 " themes
-Plug 'jacoborus/tender.vim'
-Plug 'morhetz/gruvbox'
 Plug 'joshdick/onedark.vim'
 
 call plug#end()
