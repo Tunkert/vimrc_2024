@@ -23,6 +23,7 @@ set nu rnu
 " colors
 set bg=dark
 colo onedark 
+hi Normal guibg=NONE ctermbg=NONE
 
 " wildmenu - tab through menu
 set wildmenu
