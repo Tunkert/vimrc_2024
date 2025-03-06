@@ -1,38 +1,44 @@
+syntax on
+set guifont=Mononoki\ Nerd\ Font:h12
+set backspace=eol,indent,start
+
+" scroll bar
+set guioptions-=r
+set guioptions-=T
+set guioptions-=m
+
+" set proper indents
+set ts=4 sts=4 sw=4 et ai si
+
+" set line numbers, relative line numbers
+set nu rnu
+
+" maximize upon opening
+au GUIEnter * simalt ~x
+
+" vim plugings
 call plug#begin()
 
-" regular plugins
-Plug 'neoclide/coc.nvim'
+Plug 'mattn/emmet-vim'
+Plug 'morhetz/gruvbox'
+Plug 'junegunn/goyo.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-" themes
-Plug 'joshdick/onedark.vim'
-
 call plug#end()
 
-" general
-filetype plugin indent on
-syntax on
+" leaderkey emmet
+" let g:user_emmet_leader_key=','
 
-" spacing
-set ts=2 sts=2 sw=2 et ai si
+" set colorscheme
+set bg=light
+colo gruvbox
+let g:gruvbox_contrast_dark='soft'
+let g:gruvbox_contrast_light='soft'
 
-" line numbers
-set nu rnu
+" goyo width
+let g:goyo_width=100
 
-" colors
-set bg=dark
-colo onedark 
-hi Normal guibg=NONE ctermbg=NONE
-
-" wildmenu - tab through menu
-set wildmenu
-
-" airline on top also
+" vim airline tabline and theme
 let g:airline#extensions#tabline#enabled = 1
-
-" no errorbell
-set belloff=all 
-
-" backspace
-set backspace=indent,eol,start
+let g:airline_theme='gruvbox'
